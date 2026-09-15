@@ -157,11 +157,7 @@
   };
 
   const mediaBlock = (m, id) => {
-    if (!m || !m.length) return `<div class="media"><div class="placeholder">
-      No media yet. Drop files into <code>images/</code>, then add them to the
-      <code>media</code> array for <code>${esc(id)}</code> in <code>content.js</code>:<br><br>
-      <code>media: [{ src: "images/${esc(id)}-1.png", caption: "What this shows" }]</code>
-      </div></div>`;
+    if (!m || !m.length) return "";
     return `<div class="media">${m.map(x => {
       const pdf = /\.pdf(\?|$)/i.test(x.src);
       const video = /\.(mp4|webm|ogg|mov|m4v)(\?|$)/i.test(x.src);
