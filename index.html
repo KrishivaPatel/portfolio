@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishiv Patel | Aerospace Engineering Portfolio</title>
+<meta name="description" content="Aerospace engineering portfolio: propulsion, fluid systems, and active flow control.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F7F9;
+    --ink:#14181D;
+    --graphite:#5A6470;
+    --hair:#D2D8DF;
+    --signal:#1B4DB1;
+    --well:#ECEFF3;
+    --max:820px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--signal);text-decoration:none;border-bottom:1px solid rgba(27,77,177,.3)}
+  a:hover{border-bottom-color:var(--signal)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+  .wrap{display:grid;grid-template-columns:240px minmax(0,1fr);gap:44px;
+        max-width:1120px;margin:0 auto;padding:56px 32px 96px}
+
+  /* ---------- side index ---------- */
+  nav{position:sticky;top:56px;align-self:start;font-size:13.5px;max-height:calc(100vh - 112px);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+  nav::-webkit-scrollbar{width:6px}
+  nav::-webkit-scrollbar-track{background:transparent}
+  nav::-webkit-scrollbar-thumb{background:var(--hair);border-radius:999px}
+  nav .navtitle{font-weight:600;letter-spacing:.01em;margin-bottom:10px}
+  nav .navmeta{margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid var(--hair);color:var(--graphite);line-height:1.7}
+  nav .navmeta a{color:var(--graphite);border-bottom:1px solid var(--hair);display:block;line-height:1.5}
+  nav .navmeta a:hover{color:var(--signal)}
+  nav ol{list-style:none;margin:0;padding:0;counter-reset:n}
+  nav > ol{display:block}
+  nav .navgroup{margin:22px 0 0}
+  nav .navgroup:first-child{margin-top:0}
+  nav .navgroup-title{margin:0 0 6px;padding-top:0;color:var(--graphite);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;display:block}
+  nav .navgroup-title::after{content:"";display:block;height:1px;background:var(--hair);margin-top:6px;width:100%}
+  nav .navgroup-list{list-style:none;margin:0;padding:0}
+  nav .navgroup-list > li{margin:0 0 10px}
+  nav .navgroup-list > li:last-child{margin-bottom:0}
+  nav a{display:block;padding:3px 0 2px 12px;color:var(--graphite);border:0;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+  nav a:hover{color:var(--ink)}
+  nav a.on{color:var(--ink);font-weight:500;box-shadow:inset 2px 0 0 var(--signal);padding-left:12px}
+  nav .navtools{display:block;width:100%;margin:1px 0 0 24px;padding:0;color:var(--graphite);font-size:10.5px;line-height:1.3;white-space:normal;overflow-wrap:anywhere;opacity:.75}
+  nav .navmeta a{color:var(--graphite);border-bottom:1px solid var(--hair);display:block}
+  nav .navmeta a:hover{color:var(--signal)}
+
+  main{max-width:var(--max)}
+
+  /* ---------- hero ---------- */
+  h1{font-size:clamp(30px,4.4vw,42px);line-height:1.12;font-weight:600;
+     letter-spacing:-.02em;margin:0 0 8px}
+  .profile-links{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 18px;font-size:14px;line-height:1.7;color:var(--graphite)}
+  .profile-links a{color:var(--graphite);border-bottom-color:rgba(27,77,177,.25)}
+  .profile-links a:hover{color:var(--signal)}
+  .tagline{font-size:19px;color:var(--graphite);margin:0 0 30px;max-width:56ch}
+  .intro p{max-width:66ch;margin:0 0 14px}
+
+  /* ---------- spec table: the core device ---------- */
+  .spec{width:100%;border-collapse:collapse;margin:24px 0 0;font-size:14.5px}
+  .spec tr{border-top:1px solid var(--hair)}
+  .spec tr:last-child{border-bottom:1px solid var(--hair)}
+  .spec th{text-align:left;font-weight:500;color:var(--graphite);
+           padding:7px 20px 7px 0;width:36%;vertical-align:top}
+  .spec td{padding:7px 0;font-family:"IBM Plex Mono",monospace;
+           font-size:13.5px;font-variant-numeric:tabular-nums;vertical-align:top}
+
+  /* ---------- sections ---------- */
+  section{padding-top:60px;scroll-margin-top:40px}
+  section > h2{font-size:24px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px;line-height:1.25}
+  .org{color:var(--graphite);font-size:15px;margin:0 0 2px}
+  .rolerow{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--graphite);margin:0 0 18px}
+  .rolerow .role{color:var(--ink);font-weight:500}
+  .section-tools{margin:-8px 0 0;color:var(--graphite);font-size:11.5px;line-height:1.5;letter-spacing:.01em}
+  .summary{max-width:66ch;margin:18px 0 0}
+  ul.b{margin:16px 0 0;padding:0 0 0 18px;max-width:70ch}
+  ul.b li{margin:0 0 8px}
+
+  .divider{height:1px;background:var(--hair);margin-top:60px}
+
+  /* ---------- media ---------- */
+  .media{margin:26px 0 0;display:grid;gap:20px}
+  .media figure{margin:0}
+  .media img,.media video{width:100%;height:auto;display:block;background:var(--well);border:1px solid var(--hair)}
+  .media embed,.media iframe{width:100%;height:640px;border:1px solid var(--hair);background:var(--well)}
+  .media figcaption{font-size:13.5px;color:var(--graphite);margin-top:7px}
+  .placeholder{border:1px dashed var(--hair);background:var(--well);
+               padding:22px;font-size:13.5px;color:var(--graphite);line-height:1.65}
+  .placeholder code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+                    background:#fff;border:1px solid var(--hair);padding:1px 5px}
+
+  /* ---------- publications / education / skills ---------- */
+  .pub{padding:18px 0;border-top:1px solid var(--hair)}
+  .pub:last-of-type{border-bottom:1px solid var(--hair)}
+  .pub .t{font-weight:500;max-width:64ch}
+  .pub .v{color:var(--graphite);font-size:14.5px;margin-top:3px}
+  .eduhead{font-weight:500}
+  .footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--hair);
+          font-size:14px;color:var(--graphite)}
+
+  @media (max-width:860px){
+    .wrap{grid-template-columns:1fr;gap:0;padding:36px 22px 72px}
+    nav{position:static;max-height:none;overflow:visible;overscroll-behavior:auto;padding-right:0;margin-bottom:34px;padding-bottom:22px;border-bottom:1px solid var(--hair)}
+    nav > ol{display:flex;flex-wrap:wrap;gap:4px 16px}
+    nav .navgroup{flex:0 0 100%;margin-top:12px}
+    nav .navgroup-list{display:flex;flex-wrap:wrap;gap:4px 16px}
+    nav .navgroup-title{margin:0 0 4px}
+    nav .navgroup-title::after{margin-top:4px}
+    nav a{padding-left:0}
+    nav a.on{box-shadow:none;padding-left:0;border-bottom:2px solid var(--signal)}
+    nav .navtools{display:none}
+    .spec th{width:44%}
+    .media embed,.media iframe{height:440px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Contents">
+    <div class="navtitle">Contents</div>
+    <ol id="nav"></ol>
+  </nav>
+
+  <main id="main"></main>
+</div>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  const P = PORTFOLIO, esc = s => String(s==null?"":s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+  const specTable = rows => !rows || !rows.length ? "" :
+    `<table class="spec"><tbody>${rows.map(r =>
+      `<tr><th scope="row">${esc(r.k)}</th><td>${esc(r.v)}</td></tr>`).join("")}</tbody></table>`;
+
+  // Falls back to the original images/ file if the optimized copy is missing/renamed —
+  // makes the images_optimized/ swap in content.js reversible without editing content.js.
+  const imgTag = (src, caption) => {
+    const s = esc(src);
+    const fb = esc(String(src).replace(/^images_optimized\//i, "images/"));
+    return `<img src="${s}" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='${fb}';}" alt="${esc(caption||"")}" loading="lazy">`;
+  };
+
+  const mediaBlock = (m, id) => {
+    if (!m || !m.length) return `<div class="media"><div class="placeholder">
+      No media yet. Drop files into <code>images/</code>, then add them to the
+      <code>media</code> array for <code>${esc(id)}</code> in <code>content.js</code>:<br><br>
+      <code>media: [{ src: "images/${esc(id)}-1.png", caption: "What this shows" }]</code>
+      </div></div>`;
+    return `<div class="media">${m.map(x => {
+      const pdf = /\.pdf(\?|$)/i.test(x.src);
+      const video = /\.(mp4|webm|ogg|mov|m4v)(\?|$)/i.test(x.src);
+      const body = pdf
+        ? `<embed src="${esc(x.src)}" type="application/pdf">`
+        : video
+          ? `<video controls preload="metadata" playsinline src="${esc(x.src)}"></video>`
+          : imgTag(x.src, x.caption);
+      return `<figure>${body}${x.caption?`<figcaption>${esc(x.caption)}</figcaption>`:""}</figure>`;
+    }).join("")}</div>`;
+  };
+
+  const profileLinks = [];
+  if (P.profile.linkedin) profileLinks.push(`<a href="${esc(P.profile.linkedin)}">linkedin.com/in/krishivapatel</a>`);
+  if (P.profile.github)   profileLinks.push(`<a href="${esc(P.profile.github)}">GitHub</a>`);
+  if (P.profile.resume)   profileLinks.push(`<a href="${esc(P.profile.resume)}">Resume</a>`);
+  profileLinks.push(`<a href="mailto:${esc(P.profile.email)}">${esc(P.profile.email)}</a>`);
+
+  /* ---- hero ---- */
+  let html = `<header id="top" style="scroll-margin-top:40px;">
+    <h1>${esc(P.profile.name)}</h1>
+    <div class="profile-links">${profileLinks.join(" &middot; ")}</div>
+    <p class="tagline">${esc(P.profile.tagline)}</p>
+    <div class="intro">${(P.profile.intro||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+    ${P.profile.media && P.profile.media.length ? mediaBlock(P.profile.media, "profile") : ""}
+    ${specTable(P.profile.specs)}
+  </header>`;
+
+  /* ---- projects ---- */
+  (P.projects||[]).forEach(pr => {
+    const tools = Array.isArray(pr.tools) ? pr.tools.filter(Boolean) : [];
+    html += `<div class="divider"></div>
+    <section id="${esc(pr.id)}">
+      <h2>${esc(pr.title)}</h2>
+      <p class="org">${esc(pr.org)}</p>
+      <div class="rolerow"><span class="role">${esc(pr.role)}</span><span>${esc(pr.dates)}</span></div>
+      ${tools.length ? `<div class="section-tools">${tools.map(t => esc(t)).join(", ")}</div>` : ""}
+      ${specTable(pr.specs)}
+      ${pr.summary?`<p class="summary">${esc(pr.summary)}</p>`:""}
+      ${pr.bullets&&pr.bullets.length?`<ul class="b">${pr.bullets.map(b=>`<li>${esc(b)}</li>`).join("")}</ul>`:""}
+      ${mediaBlock(pr.media, pr.id)}
+    </section>`;
+  });
+
+  /* ---- publications ---- */
+  if ((P.publications||[]).length){
+    html += `<div class="divider"></div><section id="publications"><h2>Publications</h2>
+      ${P.publications.map(p=>`<div class="pub">
+        <div class="t">${p.link?`<a href="${esc(p.link)}">${esc(p.title)}</a>`:esc(p.title)}</div>
+        <div class="v">${esc(p.venue)}. ${esc(p.note)}</div>
+        ${mediaBlock(p.media || [], p.title)}
+      </div>`).join("")}
+    </section>`;
+  }
+
+  /* ---- education ---- */
+  if (P.education){
+    html += `<div class="divider"></div><section id="education"><h2>Education</h2>
+      <p class="org"><span class="eduhead">${esc(P.education.school)}</span><br>
+      ${esc(P.education.degree)} &middot; ${esc(P.education.dates)}</p>
+      <ul class="b">${(P.education.items||[]).map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+      ${P.education.media && P.education.media.length ? mediaBlock(P.education.media, "education") : ""}
+    </section>`;
+  }
+
+  /* ---- skills ---- */
+  if ((P.skills||[]).length){
+    html += `<div class="divider"></div><section id="skills"><h2>Skills</h2>
+      ${specTable(P.skills.map(s=>({k:s.group,v:s.items})))}
+    </section>`;
+  }
+
+  const c = P.profile;
+  html += `<div class="footer">
+    ${esc(c.location)} &middot; <a href="mailto:${esc(c.email)}">${esc(c.email)}</a> &middot; ${esc(c.phone)}
+  </div>`;
+
+  document.getElementById("main").innerHTML = html;
+
+  /* ---- side index ---- */
+  const projectGroups = (P.projects||[]).reduce((acc, p) => {
+    const group = p.group || "Other";
+    if (!acc[group]) acc[group] = [];
+    acc[group].push({id:p.id,label:p.title,tools:Array.isArray(p.tools)?p.tools.filter(Boolean):[]});
+    return acc;
+  }, {});
+
+  const navGroups = Object.entries(projectGroups);
+  const navIndex = [
+    {id:"top", label:"Profile", tools:[]},
+    ...navGroups.flatMap(([group, items]) => items.map(i => ({...i, group})))
+  ];
+  const navHtml = `
+    <li><a href="#top">Profile</a></li>
+    ${navGroups.map(([group, items]) => `
+      <li class="navgroup">
+        <div class="navgroup-title">${esc(group)}</div>
+        <ol class="navgroup-list">
+          ${items.map(i => `
+            <li>
+              <a href="#${esc(i.id)}">${esc(i.label)}</a>
+              ${i.tools.length ? `<span class="navtools">${esc(i.tools.join(", "))}</span>` : ""}
+            </li>
+          `).join("")}
+        </ol>
+      </li>
+    `).join("")}
+  `;
+
+  document.getElementById("nav").innerHTML = navHtml;
+
+  const navLinks = [...document.querySelectorAll("#nav a")];
+  const map = new Map(navLinks.map(a=>[a.getAttribute("href").slice(1),a]));
+
+  /* ---- the one piece of motion: mark the section you're reading ---- */
+  const obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        navLinks.forEach(a=>a.classList.remove("on"));
+        const a = map.get(e.target.id); if(a) a.classList.add("on");
+      }
+    });
+  },{rootMargin:"-15% 0px -70% 0px"});
+  document.querySelectorAll("main header, main section").forEach(s=>obs.observe(s));
+})();
+</script>
+</body>
+</html>
