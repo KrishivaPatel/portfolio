@@ -24,7 +24,7 @@ const PORTFOLIO = {
       { src: "images_optimized/plane2.jpeg", caption: "" }
     ],
     github: "",              // add your GitHub URL when ready
-    resume: "",              // e.g. "Krishiv_Patel_Resume.pdf" placed next to index.html
+    resume: "Krishiv_Patel_Aerospace_Resume.pdf",
 
     // Shown as the hero spec block. Keep to 6 rows; they read as a data sheet.
     specs: [
@@ -37,7 +37,7 @@ const PORTFOLIO = {
     ],
 
     intro: [
-      "Half of what I do is CFD and design for experimental aerodynamics. The other half is propulsion. I am Head of Design on a 750 lbf bipropellant engine, and I have been in the Rutgers Rocket Propulsion Lab since March 2025 working regenerative cooling.",
+      "Half of what I do is CFD and design for experimental aerodynamics. The other half is propulsion. I am Head of Design on a 750 lbf bipropellant engine, and I have been in the Rutgers Rocket Propulsion Lab since March 2025 working on regenerative cooling.",
       "What I care about is owning a part end to end: drawing it, having it made, testing it, and working through the list of changes that comes back. The revision cycle is where you actually learn the hardware."
     ]
   },
