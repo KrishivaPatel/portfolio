@@ -23,16 +23,17 @@ const PORTFOLIO = {
     media: [
       { src: "images_optimized/plane2.jpeg", caption: "" }
     ],
-    github: "",              // add your GitHub URL when ready
-    resume: "Krishiv_Patel_Aerospace_Resume.pdf",
+    github: "https://github.com/krishivapatel",
+    resume: "Krishiv_Patel_Resume.pdf",
 
-    // Shown as the hero spec block. Keep to 6 rows; they read as a data sheet.
+    // Shown as the hero spec block. Keep it short; it reads as a data sheet.
     specs: [
       { k: "Degree",      v: "B.S. Aerospace Engineering, Rutgers" },
       { k: "Graduating",  v: "May 2027" },
       { k: "Minor",       v: "Mathematics, Energy Systems Certificate" },
       { k: "Focus",       v: "Propulsion, fluid systems, active flow control" },
       { k: "Published",   v: "IEEE MIT URTC 2026, GSET Research Journal" },
+      { k: "Fellowship",  v: "NASA Space Grant Fellow (NJSGC), 2026–27" },
       { k: "Citizenship", v: "U.S. citizen" }
     ],
 
@@ -94,7 +95,7 @@ const PORTFOLIO = {
       ],
       media: [
         { src: "images_optimized/rocket1.png", caption: "Top-view schematic of the regenerative cooling rocket engine layout" },
-        { src: "images_optimized/rocket2.png", caption: "Unfinished 3D view of the lab engine assembly and chamber geometry" }
+        { src: "images_optimized/rocket2.png", caption: "In-progress 3D view of the lab engine assembly and chamber geometry" }
       ]
     },
 
@@ -130,16 +131,17 @@ const PORTFOLIO = {
       id: "actuator",
       title: "Pulsed-Air Actuator for Active Flow Control",
       org: "Rutgers Dept. of Mechanical & Aerospace Engineering",
-      role: "Research Lead, Design & CFD",
+      role: "NASA Space Grant Fellow (2026–27) | Research Lead, Design & CFD (from Undergraduate Researcher)",
       dates: "Mar 2025 – Present",
       group: "Aerodynamics & Flow Control",
       tools: ["ANSYS Fluent", "SolidWorks", "CFD"],
       specs: [
         { k: "Program budget", v: "$42,000 (department + state grant)" },
+        { k: "Fellowship",     v: "NJSGC Academic Year award, 2026–27" },
         { k: "Jet velocity",   v: "150 – 200 m/s" },
         { k: "Modulation",     v: "10 – 1000 Hz" },
         { k: "Tools",          v: "ANSYS Fluent, CFX, SolidWorks" },
-        { k: "Tolerancing",    v: "ASME Y14.5-2018" }
+        { k: "Tolerancing",    v: "ASME Y14.5 (2009 to date, 2018 going forward)" }
       ],
       summary: "A deployable active flow control device intended to replace the fixed chines on a commercial engine nacelle. A chine is permanent geometry that sheds a vortex to keep flow attached over the wing at high angle of attack. You need it at takeoff and landing, and you carry its drag for the rest of the flight. This one would only be there when you want it.",
       bullets: [
@@ -173,12 +175,12 @@ const PORTFOLIO = {
         "Built the test setup, the calibration procedure, and the data reduction workflow.",
         "Applied finite-span aspect-ratio corrections (AR = 5, e = 0.8) to separate 3D downwash from low-Reynolds viscous behavior.",
         "Identified a stall-order asymmetry: top-wing stall dominates total lift loss, and every best-performing configuration placed the greater angle of attack on the lower wing.",
-        "Published in the The Governor's School of New Jersey Program in Engineering & Technology Research Journal and accepted to the 2026 IEEE MIT Undergraduate Research Technology Conference."
+        "Published in The Governor's School of New Jersey Program in Engineering & Technology Research Journal and presented at the 2026 IEEE MIT Undergraduate Research Technology Conference."
       ],
       media: [
         { src: "images_optimized/HEATMAP3D_Matrix1_LD (4).png", caption: "Lift-to-drag comparison across top-wing and bottom-wing airfoil combinations" },
         { src: "images_optimized/HEATMAP3D_Matrix2_LD (4).png", caption: "Lift-to-drag surface map for the 2212×2212 decalage matrix" },
-        { src: "images_optimized/EXP_Matrix1_Combined (1).png", caption: "Experimental performance trends across lift coefficient and drag coefficient" },
+        { src: "images_optimized/EXP_Matrix1_Combined (1).png", caption: "Matrix 1 fixed-angle screening sweep: lift and drag coefficient trends. This is not the tuned-decalage result; the 9.12 peak comes from Matrix 2." },
         { src: "images/NJ Space Grant + JJ Slade - 2025-2026.pdf", caption: "Presentation to faculty and project stakeholders" }
       ]
     },
@@ -194,11 +196,11 @@ const PORTFOLIO = {
       specs: [
         { k: "Becoming",  v: "Standard module, Rutgers MAE Senior Lab" },
         { k: "Audience",  v: "Required course, all Aerospace and Mechanical seniors" },
-        { k: "Source",    v: "52-run summer research campaign" }
+        { k: "Source",    v: "The summer NASA research campaign" }
       ],
       summary: "Converting the summer research campaign into a single-session student experiment that will be run by students I will never meet. That changed how I write documentation: it has to work without me in the room.",
       bullets: [
-        "Authored the test methodology, calibration procedure, data reduction workflow, and documented limitations that form the instructional basis of the module.",
+        "Adapted the summer campaign's calibration and data reduction workflow into a student-facing test methodology, with its limitations documented so it runs without supervision.",
         "Redesigning and reprinting the airfoil model set for repeated student use.",
         "Working with the wind tunnel technician and two other developers."
       ],
@@ -281,12 +283,12 @@ const PORTFOLIO = {
       role: "Independent, four-part study",
       dates: "Feb 2026 – Apr 2026",
       group: "Structures & Mechanical",
-      tools: ["MATLAB", "ANSYS", "Composite analysis"],
+      tools: ["MATLAB", "Composite analysis"],
       specs: [
         { k: "Material", v: "SM and HM carbon/epoxy" },
         { k: "Layup",    v: "Symmetric 8-ply [+Θ/−Θ/+30°/−30°]s" },
         { k: "Criteria", v: "Hashin (1980), maximum stress" },
-        { k: "Result",   v: "Optimum ply angle 33°, 22% margin improvement" },
+        { k: "Result",   v: "Optimum ply angle 33°, matrix tension governing" },
         { k: "Code",     v: "~400 lines MATLAB, custom functions" }
       ],
       summary: "A four-part MATLAB suite built from first principles, moving from single-ply anisotropy through full laminate strength prediction.",
@@ -294,14 +296,14 @@ const PORTFOLIO = {
         "Stress and strain transformation between material and global frames, with anisotropy swept over ply orientation.",
         "Effective laminate stiffness from the [A] matrix, mid-plane strains, and ply-level stress recovery.",
         "First-ply-failure prediction using Hashin and maximum-stress criteria, with 2D and 3D failure envelopes generated by bisection search.",
-        "Identified matrix tension in the −67.8° ply as the governing failure mode, and swept ply orientation to an optimum at 33° that raised the first-ply-failure margin 22%.",
+        "Identified matrix tension in the −67.8° ply as the governing failure mode, and swept ply orientation to the angle that maximizes the first-ply-failure margin (33°). The assignment load exceeds laminate capacity at every angle, so the sweep shows how strongly ply angle moves the margin, not a passing design.",
         "Showed shear was the dominant load, exceeding ply shear strength by 6.3 times."
       ],
       media: [
-        { src: "images/Analysis of HM Carbon (Pan).pdf",},
-        { src: "images/Analysis of SM Carbon Fiber (Pan).pdf",},
-        { src: "images/Anisotropic Strength Analysis (SM Carbon, Pan).pdf",},
-        { src: "images/Laminated Strength Analysis (SM Carbon Composite, Hashin [1980] Failure Criterion).pdf",}
+        { src: "images/Analysis of HM Carbon (Pan).pdf", caption: "Part 1: stress and strain transformation and anisotropy, HM carbon" },
+        { src: "images/Analysis of SM Carbon Fiber (Pan).pdf", caption: "Part 2: laminate stiffness, mid-plane strains, and ply stresses, SM carbon" },
+        { src: "images/Anisotropic Strength Analysis (SM Carbon, Pan).pdf", caption: "Part 3: Hashin and maximum-stress criteria with 2D and 3D failure envelopes" },
+        { src: "images/Laminated Strength Analysis (SM Carbon Composite, Hashin [1980] Failure Criterion).pdf", caption: "Part 4: first-ply failure of the 8-ply laminate and the ply-angle sweep" }
       ]
     },
 
@@ -346,6 +348,7 @@ const PORTFOLIO = {
       tools: ["ANSYS Mechanical", "MATLAB"],
       specs: [
         { k: "Solver",            v: "ANSYS Mechanical, static structural" },
+        { k: "Material",          v: "ANSYS default structural steel, yield 250 MPa" },
         { k: "Peak von Mises",    v: "431.86 MPa" },
         { k: "Peak max principal", v: "481.68 MPa" },
         { k: "Fatigue life, VM",  v: "35,544 cycles minimum" },
@@ -353,6 +356,7 @@ const PORTFOLIO = {
       ],
       summary: "A finite element study of a cantilever beam under end loading, comparing stress measures and then carrying both into a fatigue life prediction to see how much the choice of failure theory changes the answer.",
       bullets: [
+        "Both peaks exceed the 250 MPa yield of ANSYS default structural steel, so the linear-elastic result is not physical at the fillet; the next step is a converged fillet mesh and an elastic-plastic or strain-life analysis.",
         "Compared equivalent (von Mises) stress against maximum principal stress across the same load case. Both localize at the fillet where the beam meets the fixed support, but max principal returns the higher peak and captures the compressive region von Mises cannot distinguish.",
         "Ran fatigue life prediction under both theories. Maximum principal predicts 10,251 cycles to failure against 35,544 for von Mises, so the theory choice moves the answer by more than a factor of three.",
         "Both predictions place minimum life at the same location, immediately downstream of the fillet, with the outer span surviving past the 1e6 cycle cutoff.",
@@ -369,14 +373,14 @@ const PORTFOLIO = {
   /* ========================================================== */
   publications: [
     {
-      title: "Experimental Investigation of Airfoil Aerodynamics and Flow Control: Mono and Biplane Configurations",
+      title: "Experimental Investigation of Airfoil Aerodynamics and Flow Control Concepts: Mono and Biplane Configurations",
       venue: "2026 IEEE MIT Undergraduate Research Technology Conference",
-      note: "Accepted, presenting October 2026. Co-corresponding author with Dr. Edward DeMauro.",
+      note: "Presented October 10, 2026. First author; co-corresponding with Dr. Edward DeMauro.",
       link: "",
-      media: [{ src: "images/MIT IEEE Paper_KrishivAmitPatel (1).pdf", caption: "Accepted paper for the 2026 IEEE MIT Undergraduate Research Technology Conference" }]
+      media: [{ src: "images/MIT IEEE Paper_KrishivAmitPatel (1).pdf", caption: "Paper presented at the 2026 IEEE MIT Undergraduate Research Technology Conference" }]
     },
     {
-      title: "Experimental Investigation of Airfoil Aerodynamics and Flow Control",
+      title: "Experimental Investigation of Airfoil Aerodynamics and Flow Control Concepts: Mono and Biplane Configurations",
       venue: "GSET Research Journal, Governor's School of New Jersey",
       note: "Published July 2026. Sole corresponding author.",
       link: "",
@@ -391,7 +395,8 @@ const PORTFOLIO = {
     items: [
       "James J. Slade Scholar: graduate research program, 6 credits of graduate independent research (16:650:542, 16:650:543)",
       "Dean's List, 4 semesters",
-      "NASA L'SPACE Mission Concept Academy, Fall 2026: thermal subsystem engineer taking a spacecraft mission concept through a NASA-reviewed PDR",
+      "NASA Space Grant Fellow, NJSGC Academic Year award, 2026–27",
+      "NASA L'SPACE Mission Concept Academy, Fall 2026: thermal subsystem engineer on a lunar south pole mission concept, through a NASA-reviewed PDR",
       "Francisco Diaz-Masso Engineering Scholarship, NASA Space Grant Scholarship, Rutgers School of Engineering Scholarship",
       "Private Pilot Ground School completed; endorsed for FAA Private Pilot written examination"
     ],
