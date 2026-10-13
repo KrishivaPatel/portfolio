@@ -378,7 +378,7 @@ const PORTFOLIO = {
       note: "Presented October 10, 2026. First author; co-corresponding with Dr. Edward DeMauro.",
       link: "",
       media: [
-        { src: "images/MIT IEEE Paper_KrishivAmitPatel (1).pdf", caption: "Paper presented at the 2026 IEEE MIT Undergraduate Research Technology Conference" },
+        { src: "images/IEEE_MIT_URTC_2026_Paper_ID-236.pdf", caption: "Camera-ready paper, 2026 IEEE MIT Undergraduate Research Technology Conference" },
         { src: "images/IEEE_MIT_URTC_2026_Presentation_ID-236.pdf", caption: "Slides presented at MIT, October 10, 2026 (Paper ID-236)" }
       ]
     },
