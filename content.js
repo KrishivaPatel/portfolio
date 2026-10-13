@@ -20,9 +20,9 @@ const PORTFOLIO = {
     email: "krishivp23@gmail.com",
     phone: "973-255-6475",
     linkedin: "https://linkedin.com/in/krishivapatel",
-    media: [
-      { src: "images_optimized/URTC2026_Presenting_Biplane_Results.jpg", caption: "Presenting our biplane wind tunnel results at the IEEE MIT Undergraduate Research Technology Conference, October 10, 2026" }
-    ],
+    // Portrait sits beside the name and intro. Leave media: [] empty unless you want a full-width image under the intro.
+    portrait: { src: "images_optimized/URTC2026_MIT_Portrait.jpg", caption: "MIT, October 2026" },
+    media: [],
     github: "https://github.com/krishivapatel",
     resume: "Krishiv_Patel_Resume.pdf",
 
@@ -378,9 +378,9 @@ const PORTFOLIO = {
       note: "Presented October 10, 2026. First author; co-corresponding with Dr. Edward DeMauro.",
       link: "",
       media: [
-        { src: "images_optimized/URTC2026_Title_Slide_Authors.jpg", caption: "Opening the talk at MIT with the GSET scholars, October 10, 2026" },
+        { src: "images_optimized/URTC2026_Presenting_Biplane_Results.jpg", caption: "Presenting our biplane wind tunnel results at MIT with the GSET scholars, October 10, 2026" },
+        { src: "images_optimized/URTC2026_Title_Slide_Authors.jpg", caption: "Opening the talk", half: true },
         { src: "images_optimized/URTC2026_Paper_Presenter_Badge.jpg", caption: "Paper presenter credential, Paper ID-236", half: true },
-        { src: "images_optimized/URTC2026_MIT_Portrait.jpg", caption: "At MIT on the day of the conference", half: true },
         { src: "images/IEEE_MIT_URTC_2026_Paper_ID-236.pdf", caption: "Camera-ready paper, 2026 IEEE MIT Undergraduate Research Technology Conference" },
         { src: "images/IEEE_MIT_URTC_2026_Presentation_ID-236.pdf", caption: "Slides presented at MIT, October 10, 2026 (Paper ID-236)" }
       ]
