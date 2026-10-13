@@ -64,12 +64,13 @@
   /* ---------- hero ---------- */
   h1{font-size:clamp(30px,4.4vw,42px);line-height:1.12;font-weight:600;
      letter-spacing:-.02em;margin:0 0 8px}
-  .profile-links{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 18px;font-size:14px;line-height:1.7;color:var(--graphite)}
+  .profile-links{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 22px;font-size:14px;line-height:1.7;color:var(--graphite)}
   .profile-links a{color:var(--graphite);border-bottom-color:rgba(27,77,177,.25)}
   .profile-links a:hover{color:var(--signal)}
   .tagline{font-size:19px;color:var(--graphite);margin:0 0 30px;max-width:56ch}
-  .hero-top{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:36px;align-items:start}
-  .hero-portrait{margin:6px 0 0}
+  .hero-top{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:36px;align-items:start}
+  .hero-top .tagline{margin-bottom:22px}
+  .hero-portrait{margin:4px 0 0}
   .hero-portrait img{width:100%;height:auto;display:block;background:var(--well);border:1px solid var(--hair)}
   .hero-portrait figcaption{font-size:12.5px;color:var(--graphite);margin-top:6px}
   .intro p{max-width:66ch;margin:0 0 14px}
@@ -129,7 +130,8 @@
     nav a.on{box-shadow:none;padding-left:0;border-bottom:2px solid var(--signal)}
     nav .navtools{display:none}
     .hero-top{grid-template-columns:1fr;gap:18px}
-    .hero-portrait{order:-1;max-width:220px;margin:0}
+    .hero-portrait{order:-1;margin:0}
+    .hero-portrait img{aspect-ratio:5/4;object-fit:cover;object-position:50% 85%}
     .spec th{width:44%}
     .media embed,.media iframe{height:440px}
   }
@@ -184,12 +186,12 @@
   profileLinks.push(`<a href="mailto:${esc(P.profile.email)}">${esc(P.profile.email)}</a>`);
 
   /* ---- hero ---- */
-  const heroText = `<h1>${esc(P.profile.name)}</h1>
-    <div class="profile-links">${profileLinks.join(" &middot; ")}</div>
-    <p class="tagline">${esc(P.profile.tagline)}</p>
+  const heroText = `<p class="tagline">${esc(P.profile.tagline)}</p>
     <div class="intro">${(P.profile.intro||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
   const pt = P.profile.portrait;
   let html = `<header id="top" style="scroll-margin-top:40px;">
+    <h1>${esc(P.profile.name)}</h1>
+    <div class="profile-links">${profileLinks.join("")}</div>
     ${pt && pt.src
       ? `<div class="hero-top"><div>${heroText}</div>
          <figure class="hero-portrait">${imgTag(pt.src, pt.caption || P.profile.name)}${pt.caption?`<figcaption>${esc(pt.caption)}</figcaption>`:""}</figure></div>`
