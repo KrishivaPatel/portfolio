@@ -250,6 +250,14 @@
     {id:"top", label:"Profile", tools:[]},
     ...navGroups.flatMap(([group, items]) => items.map(i => ({...i, group})))
   ];
+  // Non-project sections get their own group so they are one click away too.
+  const recordItems = [
+    (P.publications||[]).length ? {id:"publications", label:"Publications", tools:[]} : null,
+    P.education ? {id:"education", label:"Education", tools:[]} : null,
+    (P.skills||[]).length ? {id:"skills", label:"Skills", tools:[]} : null
+  ].filter(Boolean);
+  if (recordItems.length) navGroups.push(["Publications & Education", recordItems]);
+
   const navHtml = `
     <li><a href="#top">Profile</a></li>
     ${navGroups.map(([group, items]) => `

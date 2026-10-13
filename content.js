@@ -387,7 +387,7 @@ const PORTFOLIO = {
       venue: "GSET Research Journal, Governor's School of New Jersey",
       note: "Published July 2026. Sole corresponding author.",
       link: "",
-      media: [{ src: "images/airfoilpaperfinal (3).pdf", caption: "Published research paper from the Governor's School of New Jersey engineering journal" }]
+      media: []
     }
   ],
 
