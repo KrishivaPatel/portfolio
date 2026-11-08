@@ -136,7 +136,7 @@ const PORTFOLIO = {
       group: "Aerodynamics & Flow Control",
       tools: ["ANSYS Fluent", "SolidWorks", "CFD"],
       specs: [
-        { k: "Program budget", v: "$42,000 (department + state grant)" },
+        { k: "Program budget", v: "$45,000 (department, state grant, NASA Space Grant Fellowship)" },
         { k: "Fellowship",     v: "NJSGC Academic Year award, 2026–27" },
         { k: "Jet velocity",   v: "150 – 200 m/s" },
         { k: "Modulation",     v: "10 – 1000 Hz" },
