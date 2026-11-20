@@ -173,7 +173,7 @@
       const body = pdf
         ? `<embed src="${esc(x.src)}" type="application/pdf">`
         : video
-          ? `<video controls preload="metadata" playsinline src="${esc(x.src)}"></video>`
+          ? `<video controls preload="metadata" playsinline${x.poster?` poster="${esc(x.poster)}"`:""} src="${esc(x.src)}"></video>`
           : imgTag(x.src, x.caption);
       return `<figure${x.half?` class="half"`:""}>${body}${x.caption?`<figcaption>${esc(x.caption)}</figcaption>`:""}</figure>`;
     }).join("")}</div>`;

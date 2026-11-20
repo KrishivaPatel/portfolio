@@ -71,7 +71,7 @@ const PORTFOLIO = {
         "Own vehicle integration: propulsion-to-airframe interfaces, thrust structure load paths, and component packaging.",
         "Designing the static test stand, including feed system design and high-pressure operating procedures."
       ],
-      media: [{src: "images_optimized/BiProp_Side_1.png", caption: "Side-view render of the 750 lbf bipropellant engine concept" }]
+      media: [{src: "images_optimized/LRE_Showcase_1080p.mp4", poster: "images_optimized/LRE_Showcase_poster.jpg", caption: "Showcase render of the 750 lbf bipropellant engine: full assembly, exploded view, and section cut" }]
     },
 
     {
